@@ -7,39 +7,8 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="classpath:musicPlayer.properties"/>
-
-    <bean id="classicalMusic"
-          class="ua.aljona.springcourse.ClassicalMusic"
-        init-method="doMyInit"
-        destroy-method="doMyDestroy"
-        factory-method="getClassicalMusic">
-    </bean>
+    <context:component-scan base-package="ua.aljona.springcourse"/>
 
 
-    <!--<bean id="rockMusic"
-          class="ua.aljona.springcourse.RockMusic">
-    </bean>
-    <bean id="jazzMusic"
-          class="ua.aljona.springcourse.JazzMusic">
-    </bean>
-
-    <bean id="musicPlayer"
-          class="ua.aljona.springcourse.MusicPlayer"
-    scope="prototype"
-          init-method="doMyInit"
-          destroy-method="doMyDestroy">
-     <property name="musicList">
-        <list>
-            <ref bean="classicalMusic"/>
-            <ref bean="rockMusic"/>
-            <ref bean="jazzMusic"/>
-        </list>
-    </property>
-
-<property name="volume" value="${musicPlayer.volume}"/>
-<property name="name" value="${musicPlayer.name}"/>
-
-</bean>-->
 
 </beans>
